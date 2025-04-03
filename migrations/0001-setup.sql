@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS
         username VARCHAR(50) NOT NULL UNIQUE,
         pin VARCHAR(6) NOT NULL,
         email VARCHAR(100) NOT NULL UNIQUE,
+        locked BOOLEAN DEFAULT FALSE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
