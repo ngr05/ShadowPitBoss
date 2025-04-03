@@ -8,6 +8,7 @@ import type { Route } from "./routes/Route";
 const app = express();
 
 app.use(helmet());
+app.use(express.json());
 
 // 100 requests per 15 minutes
 const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100 });
